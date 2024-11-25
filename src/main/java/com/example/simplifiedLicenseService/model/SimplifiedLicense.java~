@@ -1,0 +1,20 @@
+package com.example.simplifiedLicenseService.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.Data;
+
+import java.time.LocalDate;
+
+@Entity
+@Data
+public class SimplifiedLicense {
+    @Id
+    private String licenseCode;
+    private String name;
+    private String binNumber;
+    private int packagesAllowed;
+    private LocalDate expirationDate;
+    private int remainingPackages;
+    private boolean active;
+}
